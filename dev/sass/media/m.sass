@@ -5,6 +5,10 @@ $unit: 'px'
   color: $red
 .blue
   color: $blue
+.violet
+  color: $violet
+.green
+  color: $green
 .head
   +w(100%)
   padding: 20px
@@ -18,7 +22,7 @@ $unit: 'px'
   z-index: 100
   top: 0
   h1
-    font-size: 20px
+    font-size: 22px
     font-weight: 700
   &-scroll
     padding: 10px 20px
@@ -43,24 +47,32 @@ $unit: 'px'
     display: block
   &-title
     font-weight: 700
-    font-size: 16px
+    font-size: 22px
   &-list
     padding: 10px
     &-item
       margin-bottom: 5px
-      font-size: 14px
 .main
   padding: 55px 20px 50px
 .article
-  margin-top: 20px
+  padding: 20px 0 30px
   &-title
-    font-size: 20px
+    font-size: 22px
     font-weight: 700
   &-text
-    line-height: 18px
-    margin-top: 10px
+    line-height: 20px
+    margin-top: 15px
     &:first-letter
       margin-left: 20px
     strong
       text-transform: uppercase
       font-weight: 700
+    b
+      font-weight: 700
+    i
+      font-style: italic
+  &-list
+    li
+      margin-left: 20px
+      margin-top: 7px
+      list-style: disc
