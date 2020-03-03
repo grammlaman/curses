@@ -1,0 +1,66 @@
+$unit: 'px'
+.section
+  +w($mobile#{$unit})
+.red
+  color: $red
+.blue
+  color: $blue
+.head
+  +w(100%)
+  padding: 20px
+  background-color: $black
+  color: #fff
+  display: flex
+  align-items: center
+  justify-content: space-between
+  transition: .35s ease
+  position: fixed
+  z-index: 100
+  top: 0
+  h1
+    font-size: 20px
+    font-weight: 700
+  &-scroll
+    padding: 10px 20px
+  &-btn
+    span
+      +wh(20px,3px)
+      display: block
+      background-color: #fff
+      border-radius: 1.5px
+      &:nth-child(2)
+        margin: 4px 0
+.aside
+  height: 100vh
+  background-color: #fff
+  overflow: auto
+  position: fixed
+  z-index: 99
+  padding: 83px 20px 20px
+  display: none
+  transition: .35s ease
+  &-show
+    display: block
+  &-title
+    font-weight: 700
+    font-size: 16px
+  &-list
+    padding: 10px
+    &-item
+      margin-bottom: 5px
+      font-size: 14px
+.main
+  padding: 55px 20px 50px
+.article
+  margin-top: 20px
+  &-title
+    font-size: 20px
+    font-weight: 700
+  &-text
+    line-height: 18px
+    margin-top: 10px
+    &:first-letter
+      margin-left: 20px
+    strong
+      text-transform: uppercase
+      font-weight: 700

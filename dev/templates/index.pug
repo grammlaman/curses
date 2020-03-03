@@ -1,0 +1,105 @@
+extends template/main
+append vars
+  -
+    page_title= 'Education'
+block content
+    aside.aside
+        .aside-block
+            a(href='#html').aside-title HTML
+            ul.aside-list
+                li.aside-list-item
+                    a(href='#tags').aside-link Теги
+                li.aside-list-item
+                    a(href='#headBody').aside-link Head / Body
+                li.aside-list-item
+                    a(href='#semantic').aside-link Семантические теги
+                li.aside-list-item
+                    a(href='#').aside-link Несемантические теги
+                li.aside-list-item
+                    a(href='#').aside-link Аттрибуты
+                li.aside-list-item
+                    a(href='#').aside-link
+        .aside-block
+            a(href='#').aside-title CSS
+            ul.aside-list
+                li.aside-list-item
+                    a(href='#').aside-link Стили расположения
+                li.aside-list-item
+                    a(href='#').aside-link Стили размеров
+                li.aside-list-item
+                    a(href='#').aside-link Стили отступов
+                li.aside-list-item
+                    a(href='#').aside-link Стили шрифтов
+                li.aside-list-item
+                    a(href='#').aside-link Стили изображений
+                li.aside-list-item
+                    a(href='#').aside-link Анимация
+                li.aside-list-item
+                    a(href='#').aside-link Взаимодействия через Checkbox / Radio
+                li.aside-list-item
+                    a(href='#').aside-link 
+        .aside-block
+            a(href='#').aside-title JavaScript
+            ul.aside-list
+                li.aside-list-item
+                    a(href='#').aside-link Типы данных
+                li.aside-list-item
+                    a(href='#').aside-link Выражения и операторы
+                li.aside-list-item
+                    a(href='#').aside-link Инструкции
+                li.aside-list-item
+                    a(href='#').aside-link Функции
+                li.aside-list-item
+                    a(href='#').aside-link Циклы
+                li.aside-list-item
+                    a(href='#').aside-link Массивы
+                li.aside-list-item
+                    a(href='#').aside-link Объекты
+                li.aside-list-item
+                    a(href='#').aside-link Взаимодействие с DOM
+                li.aside-list-item
+                    a(href='#').aside-link AJAX
+    main.main
+        section
+            .row.article
+                h2.article-title#html HTML
+                p.article-text #[strong HTML] (HyperText Markup Language / Язык ГиперТекстовой Разметки) -
+                    |&nbsp; стандартизированный язык разметки документов в сети Интернет.
+                p.article-text #[strong HTML] - теговый язык разметки документов. Любой документ на языке HTML
+                    |&nbsp; представляет собой набор элементов, причём начало и конец каждого элемента обозначается
+                    |&nbsp; специальными пометками — тегами.
+            .row.article
+                h2.article-title#tags Теги
+                p.article-text #[strong Тег] - в вэб-разработке это элемент разметки HTML-документа. Теги - ключевые
+                    |&nbsp; слова и заключаются в "#[span.red <]" и "#[span.red >]", а так же открываются, то есть ставятся в начале размечаемого
+                    |&nbsp; объекта, и закрываются, ставятся в конце размечаемого документа со слэшем "/" после открывающей
+                    |&nbsp; скобки тэга.
+            .row.article
+                h2.article-title#headBody Head / Body
+                p.article-text #[strong Head] - один из 2х основополагающих тегов на странице, он заключает информацию
+                    |&nbsp; о самой странице, а не ту, которая будет отображена в основной части окна браузера.
+                p.article-text Обязательно содержит такой элемент как: #[span.red <]#[span.blue title=' ']#[span.red >]
+                    |&nbsp; - Заголовок страницы, отображаемый в закладке браузера.
+                p.article-text #[strong Body] - второй, основополагающий тег на странице, он заключает в себе
+                    |&nbsp; информацию, которая будет отображена в основной части окна браузера.
+            .row.article
+                h2.article-title#semantic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
