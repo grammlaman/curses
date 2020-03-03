@@ -12,9 +12,15 @@ block content
                 li.aside-list-item
                     a(href='#headBody').aside-link HTML / Head / Body
                 li.aside-list-item
-                    a(href='#semantic').aside-link Семантические теги
+                    a(href='#object').aside-link Теги объектов
                 li.aside-list-item
-                    a(href='#notSemantic').aside-link Несемантические теги
+                    a(href='#layout').aside-link Теги размещения
+                li.aside-list-item
+                    a(href='#text').aside-link Текстовые теги
+                li.aside-list-item
+                    a(href='#forms').aside-link Формы
+                li.aside-list-item
+                    a(href='#table').aside-link Таблицы
                 li.aside-list-item
                     a(href='#').aside-link Аттрибуты
                 li.aside-list-item
@@ -61,43 +67,29 @@ block content
                     a(href='#').aside-link AJAX
     main.main
         section
-            .row.article
-                h2.article-title#html HTML
-                p.article-text #[strong(class='red') HTML] (HyperText Markup Language / Язык ГиперТекстовой Разметки) -&nbsp;
+            .row.article#html
+                h2.article-title HTML
+                div.article-text #[strong.red HTML] (HyperText Markup Language / Язык ГиперТекстовой Разметки) -&nbsp;
                     |стандартизированный язык разметки документов в сети Интернет.
-                p.article-text #[strong.red Гипертекст] - текст, который ссылается на другой текст.
-                p.article-text #[strong(class='red') HTML] - теговый язык разметки документов. Любой документ на языке HTM&nbsp;
+                div.article-text #[strong.red Гипертекст] - текст, который ссылается на другой текст.
+                div.article-text #[strong.red HTML] - теговый язык разметки документов. Любой документ на языке HTM&nbsp;
                     |представляет собой набор элементов, причём начало и конец каждого элемента обозначается&nbsp;
                     |специальными пометками — тегами.
-            .row.article
-                h2.article-title#tags Теги
-                p.article-text #[strong(class='red') Тег] - в вэб-разработке это элемент разметки HTML-документа. Теги - ключевые&nbsp;
+            .row.article#tags
+                h2.article-title Теги
+                div.article-text #[strong.red Тег] - в вэб-разработке это элемент разметки HTML-документа. Теги - ключевые&nbsp;
                     |слова и заключаются в "#[span.blue <]" и "#[span.blue >]", а так же открываются, то есть ставятся в начале&nbsp;
                     |размечаемого объекта, и закрываются, ставятся в конце размечаемого документа со слэшем "/" после открывающей&nbsp;
                     |скобки тэга.
-                p.article-text Теги делятся на 2 типа - строчные и блочные.
-                p.article-text #[strong(class='red') Строчные теги] - строчными называются такие элементы документа,&nbsp;
-                    |которые являются непосредственной частью строки.
-                p.article-text #[strong(class='title') Особенности строчных тегов:]
-                ul.article-list
-                    li
-                        span Внутрь строчных элементов допустимо помещать текст или другие строчные элементы. Вставлять&nbsp;
-                            |блочные элементы внутрь строчных запрещено.
-                    li
-                        span Эффект схлопывания отступов не действует.
-                    li
-                        span Свойства, связанные с размерами (#[strong(class='violet') width / height]) не применимы.
-                    li
-                        span Ширина равна содержимому плюс значения отступов, полей и границ.
-                    li
-                        span Несколько строчных элементов идущих подряд располагаются на одной строке и переносятся на&nbsp;
-                            |другую строку при необходимости.
-                    li
-                        span Можно выравнивать по вертикали с помощью свойства #[strong(class='violet') vertical-align].
-                p.article-text #[strong(class='red') Блочные теги] - блочным называется элемент, который отображается на&nbsp;
-                    |веб-странице в виде прямоугольника. Такой элемент занимает всю доступную ширину, высота&nbsp;
-                    |элемента определяется его содержимым, и он всегда начинается с новой строки.
-                p.article-text #[strong(class='title') Особенности блочных тегов:]
+                div.article-text Семантические теги - смысловые теги для пояснения четкой роли контента на странице.&nbsp;
+                    | Необходимы для поисковых роботов.
+            .row.article
+                h2.article-title Блочные теги
+                div.article-text Теги делятся на 2 типа - строчные и блочные.
+                div.article-text Блочным называется элемент, который отображается на&nbsp;
+                    | веб-странице в виде прямоугольника. Такой элемент занимает всю доступную ширину, высота&nbsp;
+                    | элемента определяется его содержимым, и он всегда начинается с новой строки.
+                div.article-text #[strong(class='title') Особенности блочных тегов:]
                 ul.article-list
                     li
                         span Блоки располагаются по вертикали друг под другом.
@@ -109,72 +101,111 @@ block content
                         span По ширине блочные элементы занимают всё допустимое пространство.
                     li
                         span Если задана ширина контента (свойство #[strong.violet width]), то ширина блока складывается&nbsp;
-                            |из значений #[strong.violet width], полей, границ, отступов слева и справа.
+                            | из значений #[strong.violet width], полей, границ, отступов слева и справа.
                     li
                         span Высота блочного элемента вычисляется браузером автоматически, исходя из содержимого блока.
                     li
                         span Если задана высота контента (свойство height), то высота блока складывается из значения&nbsp;
-                            |#[strong.violet height], полей, границ, отступов сверху и снизу. При превышении указанной&nbsp;
-                            |высоты контент отображается поверх блока.
+                            | #[strong.violet height], полей, границ, отступов сверху и снизу. При превышении указанной&nbsp;
+                            | высоты контент отображается поверх блока.
                     li
                         span На блочные элементы не действуют свойства, предназначенные для строчных элементов,&nbsp;
-                            |вроде #[strong.violet vertical-align].
+                            | вроде #[strong.violet vertical-align].
             .row.article
-                h2.article-title#headBody HTML / Head / Body
-                p.article-text #[strong(class='red') &lt;HTML&gt;] - указывает программе просмотра страниц, что это HTML документ.
-                p.article-text #[strong(class='red') &lt;Head&gt;] - один из 2х основополагающих тегов на странице, он заключает&nbsp;
-                    |информацию о самой странице, а не ту, которая будет отображена в основной части окна браузера.
-                p.article-text Обязательно содержит такой элемент как: #[span.red &lt;title=''&gt;]&nbsp;
-                    |- Заголовок страницы, отображаемый в закладке браузера.
-                p.article-text #[strong(class='red') &lt;Body&gt;] - второй, основополагающий тег на странице, он заключает в себе&nbsp;
+                h2.article-title Строчные теги
+                div.article-text Строчными называются такие элементы документа,&nbsp;
+                    | которые являются непосредственной частью строки.
+                div.article-text #[strong(class='title') Особенности строчных тегов:]
+                ul.article-list
+                    li
+                        span Внутрь строчных элементов допустимо помещать текст или другие строчные элементы. Вставлять&nbsp;
+                            | блочные элементы внутрь строчных запрещено.
+                    li
+                        span Эффект схлопывания отступов не действует.
+                    li
+                        span Свойства, связанные с размерами (#[strong(class='violet') width] / #[strong(class='violet') height]) не применимы.
+                    li
+                        span Ширина равна содержимому плюс значения отступов, полей и границ.
+                    li
+                        span Несколько строчных элементов идущих подряд располагаются на одной строке и переносятся на&nbsp;
+                            | другую строку при необходимости.
+                    li
+                        span Можно выравнивать по вертикали с помощью свойства #[strong(class='violet') vertical-align].
+            .row.article#headBody
+                h2.article-title HTML / Head / Body
+                div.article-text #[strong.red &lt;HTML&gt;] - указывает программе просмотра страниц, что это HTML документ.
+                div.article-text #[strong.red &lt;Head&gt;] - один из 2х основополагающих тегов на странице, он заключает&nbsp;
+                    |информацию о самой странице, а не ту, которая будет отображена в основной части окна браузера.#[br]
+                    |Обязательно содержит такой элемент как: #[span.red &lt;title=''&gt;]&nbsp;
+                    |- Название страницы, отображаемый в закладке браузера.
+                div.article-text #[strong.red &lt;Body&gt;] - второй, основополагающий тег на странице, он заключает в себе&nbsp;
                     |информацию, которая будет отображена в основной части окна браузера.
-            .row.article
-                h2.article-title#semantic Семантические теги
-                p.article-text Семантические теги - смысловые теги, придают смысл разметке, необходимы для поисковых роботов.
-                p.article-text #[span.red &lt;header&gt;]
-                p.article-text #[span.red &lt;aside&gt;]
-                p.article-text #[span.red &lt;main&gt;]
-                p.article-text #[span.red &lt;footer&gt;]
-                p.article-text #[span.red &lt;nav&gt;]
-                p.article-text #[span.red &lt;section&gt;]
-                p.article-text #[span.red &lt;article&gt;]
-                p.article-text #[span.red &lt;h1&gt;] - #[span.red &lt;h6&gt;] (Блочный) - заголовки разных уровней,&nbsp;
-                    |используются как заголовки страницы, статьи, раздела и т.д. На странице не может быть более одного H1.
-                p.article-text #[span(class='red') &lt;a&gt;] (Строчный) - гиперссылка на другие документы или часть этого&nbsp;
-                    |документа. Обязательный аттрибут #[span.violet href](указывает путь этой гиперссылки)
-                p.article-text #[span(class='red') &lt;img&gt;] (Строчный) - создает гиперссылку на рисунок.&nbsp;
-                    |Обязательные аттрибуты #[span.violet src = url("")](указывает путь этому изображению),&nbsp;
-                    |#[span.violet alt=""](указывает альтернативу в случае, если изображение не загрузилось)
-                p.article-text #[span(class='red') &lt;ul&gt;] / #[span(class='red') &lt;ol&gt;] (Блочный) - испльзуется для создания списков.
-                p.article-text #[span(class='red') &lt;li&gt;] (Блочный) - элемент списка(без тегов&nbsp;
-                    |#[span(class='red') &lt;ul&gt;] / #[span(class='red') &lt;ol&gt;] не используется).
-                p.article-text #[span(class='red') &lt;p&gt;] (Блочный) - используется для выделения текста в абзац.
-                p.article-text #[span(class='red') &lt;cite&gt;] (Строчный) - используется для цитат, обычно наклонный текст.
-                p.article-text #[span(class='red') &lt;em&gt;] (Строчный) - используется для выделения из текста слова&nbsp;
+            .row.article#object
+                h2.article-title Теги объектов
+                div.article-text #[span.red &lt;h1&gt;] - #[span.red &lt;h6&gt;] #[span.blue (SEO)](Блочный) - заголовки разных уровней,&nbsp;
+                    |используются как заголовки страницы, статьи, раздела и т.д. На странице не может быть более одного #[span.red &lt;h1&gt;].
+                div.article-text #[span.red &lt;p&gt;] #[span.blue (SEO)](Блочный) - используется для выделения текста в абзац, в #[span.red &lt;p&gt;]&nbsp;
+                    |нельзя поместить блочные теги.
+                div.article-text #[span.red &lt;img&gt;] - создает гиперссылку на рисунок.&nbsp;
+                    | Обязательные аттрибуты #[span.violet src = url("")](указывает путь этому изображению),&nbsp;
+                    | #[span.violet alt=""](указывает альтернативу в случае, если изображение не загрузилось).
+                div.article-text #[span.red &lt;a&gt;] - гиперссылка на другие документы или часть этого&nbsp;
+                    | документа. Обязательный аттрибут #[span.violet href](указывает путь этой гиперссылки)
+                div.article-text #[span.red &lt;button&gt;] - кнопка.
+                div.article-text #[span.red &lt;ul&gt;] / #[span.red &lt;ol&gt;] #[span.blue (SEO)](Блочный) - испльзуется для создания списков.
+                div.article-text #[span.red &lt;li&gt;] #[span.blue (SEO)](Блочный) - элемент списка(без тегов&nbsp;
+                    | #[span.red &lt;ul&gt;] / #[span.red &lt;ol&gt;] не используется).
+                div.article-text #[span.red &lt;form&gt;] - форма, содержит поля ввода информации для отправки на сервер.
+                div.article-text #[span.red &lt;table&gt;] - таблица.
+            .row.article#layout
+                h2.article-title Теги размещения
+                div.article-text #[span.red &lt;header&gt;] #[span.blue (SEO)](Блочный) - контейнер для шапки сайта.
+                div.article-text #[span.red &lt;aside&gt;] #[span.blue (SEO)](Блочный) - контейнер для бокового блока(обычно меню).
+                div.article-text #[span.red &lt;main&gt;] #[span.blue (SEO)](Блочный) - контейнер для основной части страницы, может быть один на страницу.
+                div.article-text #[span.red &lt;footer&gt;] #[span.blue (SEO)](Блочный) - контейнер для подвала сайта.
+                div.article-text #[span.red &lt;nav&gt;] #[span.blue (SEO)](Блочный) - контейнер для навигационного меню.
+                div.article-text #[span.red &lt;section&gt;] #[span.blue (SEO)](Блочный) - тематический сгруппированный раздел.
+                div.article-text #[span.red &lt;article&gt;] #[span.blue (SEO)](Блочный) - определяет независимый, самодостаточный контент.
+                div.article-text #[span.red &lt;div&gt;](Блочный) - вспомогательный тег.
+                div.article-text #[span.red &lt;span&gt;] - вспомогательный тег.
+            .row.article#text
+                h2.article-title Текстовые теги
+                div.article-text #[span.red &lt;strong&gt;] #[span.blue (SEO)] - выделение важного текста, делает его #[b.green жирным].
+                div.article-text #[span.red &lt;em&gt;] #[span.blue (SEO)] - используется для выделения из текста слова&nbsp;
                     |(#[i.green наклонный] текст).
-                p.article-text #[span.red &lt; &gt;]
-                p.article-text #[span.red &lt; &gt;]
-                p.article-text #[span.red &lt; &gt;]
-                p.article-text #[span.red &lt; &gt;]
-                p.article-text #[span.red &lt; &gt;]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                h2.article-title#notSemantic Не семантические теги
-                p.article-text #[span(class='red') &lt;b&gt;] (Строчный) - создает #[b.green жирный] текст.
-                p.article-text #[span(class='red') &lt;i&gt;] (Строчный) - создает #[i.green наклонный] текст.
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
-                p.article-text #[span.red ]
+                div.article-text #[span.red &lt;b&gt;] - создает #[b.green жирный] текст.
+                div.article-text #[span.red &lt;i&gt;] - создает #[i.green наклонный] текст.
+                div.article-text #[span.red &lt;ins&gt;] - #[ins.green подчёркнутый] текст.
+                div.article-text #[span.red &lt;del&gt;] - #[del.green зачёркнутый] текст.
+                div.article-text #[span.red &lt;sup&gt;] - верхний регистр 5#[sudiv.green 2].
+                div.article-text #[span.red &lt;sub&gt;] - нижний регистр H#[sub.green 2]O.
+                div.article-text #[span.red &lt;address&gt;] #[span.blue (SEO)](Блочный) - содержит адрес (контактные данные создателя сайта).
+                div.article-text #[span.red &lt;code&gt;] - код программы.
+                div.article-text #[span.red &lt;blockquote&gt;] #[span.blue (SEO)](Блочный) - используется для блочной цитаты занимающей абзац.
+                div.article-text #[span.red &lt;cite&gt;] #[span.blue (SEO)] - используется для цитат, #[cite.green обычно наклонный текст].
+                div.article-text #[span.red &lt;pre&gt;](Блочный) - авторское форматирование.
+            .row.article#forms
+                h2.article-title Формы
+                div.article-text #[span.red &lt;input type='text'&gt;]
+                div.article-text #[span.red &lt;input type='password'&gt;]
+                div.article-text #[span.red &lt;input type='number'&gt;]
+                div.article-text #[span.red &lt;input type='text'&gt;]
+                div.article-text #[span.red &lt;input type='text'&gt;]
+                div.article-text #[span.red &lt; &gt;]
+                div.article-text #[span.red &lt; &gt;]
+                div.article-text #[span.red &lt; &gt;]
+                div.article-text #[span.red &lt; &gt;]
+                div.article-text #[span.red &lt; &gt;]
+            .row.article#table
+                h2.article-title Таблицы
 
+
+
+
+
+                div.article-text #[span.red &lt;hr&gt;] #[span.blue (SEO)](Блочный) - линия, которая отделяет один блок от другого.
+                div.article-text #[span.red &lt;style&gt;] - тег, в котором прописываются стили для соседних тегов.
+                div.article-text #[span.red &lt; &gt;]
 
 
 
