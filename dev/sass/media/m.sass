@@ -27,24 +27,38 @@ $unit: 'px'
   &-scroll
     padding: 10px 20px
   &-btn
-    span
+    &:before,&:after,span
       +wh(20px,3px)
+      content: ''
       display: block
       background-color: #fff
       border-radius: 1.5px
-      &:nth-child(2)
-        margin: 4px 0
+      transition: .5s ease
+    span
+      margin: 4px 0
+    &-active
+      span
+        opacity: 0
+        visibility: hidden
+      &:before,&:after
+        width: 24px
+      &:before
+        transform: rotate(35deg) translateY(6px) translateX(4px)
+      &:after
+        transform: rotate(-35deg) translateY(-5px) translateX(4px)
 .aside
   height: 100vh
   background-color: #fff
   overflow: auto
   position: fixed
   z-index: 99
-  padding: 83px 20px 20px
-  display: none
-  transition: .35s ease
+  padding: 87px 20px 20px
+  opacity: 0
+  visibility: hidden
+  transition: .5s ease
   &-show
-    display: block
+    opacity: 1
+    visibility: visible
   &-title
     font-weight: 700
     font-size: 22px

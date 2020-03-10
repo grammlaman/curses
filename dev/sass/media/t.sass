@@ -3,3 +3,23 @@ $unit: 'px'
   +w($tablet#{$unit})
 .aside
   box-shadow: 10px 0 10px rgba(0,0,0,0.5)
+  transform: translateX(-150%)
+  opacity: 1
+  visibility: visible
+  &-show
+    transform: translateX(0)
+.close-btn
+  +wh(30px)
+  +dfc
+  position: absolute
+  top: 75px
+  right: 20px
+  &:before,&:after
+    content: ''
+    display: block
+    +wh(3px,25px)
+    background-color: tomato
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(-45deg) translateX(-2px) translateY(-2px)
